@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-improvement",
+      "name": "Daily Auto-Improvement",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *"
+      },
+      "enabled": true,
+      "payload": {
+        "kind": "agentTurn",
+        "message": "/skill daily_improvement",
+        "model": "bailian/qwen3-coder-plus",
+        "timeoutSeconds": 600
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce",
+        "bestEffort": true
+      },
+      "state": {}
+    },
+    {
+      "id": "autopipe-watchdog",
+      "name": "AutoPipe Watchdog",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0,30 * * * *"
+      },
+      "enabled": true,
+      "payload": {
+        "kind": "agentTurn",
+        "message": "/skill autopipe-watchdog",
+        "model": "bailian/qwen3.5-plus"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "autopipe-lock-cleanup",
+      "name": "AutoPipe Lock Cleanup",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *"
+      },
+      "enabled": true,
+      "payload": {
+        "kind": "agentTurn",
+        "message": "/skill autopipe-lock-cleanup",
+        "model": "bailian/qwen3.5-plus"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "google-ads-daily-health",
+      "name": "Google Ads Daily Health Check",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 1-5"
+      },
+      "enabled": false,
+      "payload": {
+        "kind": "systemEvent",
+        "text": "/skill google-ads-daily-health"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {}
+    },
+    {
+      "id": "google-ads-weekly-benchmark",
+      "name": "Google Ads Weekly Benchmark",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1"
+      },
+      "enabled": false,
+      "payload": {
+        "kind": "systemEvent",
+        "text": "/skill google-ads-benchmark"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {}
+    },
+    {
+      "id": "google-ads-weekly-optimize",
+      "name": "Google Ads Weekly Optimization",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * 1"
+      },
+      "enabled": false,
+      "payload": {
+        "kind": "systemEvent",
+        "text": "/skill google-ads-optimize"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {}
+    },
+    {
+      "id": "autopipe-health",
+      "name": "AutoPipe Health Agent",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 * * * *"
+      },
+      "enabled": true,
+      "payload": {
+        "kind": "agentTurn",
+        "message": "/skill autopipe-health"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    }
+  ]
+}

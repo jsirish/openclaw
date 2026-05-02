@@ -1,0 +1,1027 @@
+{
+  "env": {
+    "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+    "GITHUB_USERNAME": "${GITHUB_USERNAME}",
+    "HUBSPOT_ACCESS_TOKEN": "${HUBSPOT_ACCESS_TOKEN}"
+  },
+  "auth": {
+    "profiles": {
+      "moonshot:default": {
+        "provider": "moonshot",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding-intl.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-78652150f4804a138cff82d02e560dc2",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.6-plus",
+            "name": "qwen3.6-plus",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3.5-plus",
+            "name": "qwen3.5-plus",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "qwen3-max-2026-01-23",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-next",
+            "name": "qwen3-coder-next",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "qwen3-coder-plus",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 196608,
+            "maxTokens": 32768
+          },
+          {
+            "id": "glm-5",
+            "name": "glm-5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          },
+          {
+            "id": "glm-4.7",
+            "name": "glm-4.7",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "kimi-k2.5",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      },
+      "dynamic": {
+        "baseUrl": "https://dynamic-llm.tailbf222c.ts.net:8000/v1",
+        "apiKey": "dynamic",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "Qwen3-0.6B-4bit",
+            "name": "Qwen3 0.6B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 8192
+          },
+          {
+            "id": "Qwen3-Coder-Next-8bit",
+            "name": "Qwen3 Coder Next 8bit",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3-Coder-Next-DFlash",
+            "name": "Qwen3 Coder Next DFlash",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.5-0.8B-4bit",
+            "name": "Qwen3.5 0.8B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 8192
+          },
+          {
+            "id": "Qwen3.5-4B-4bit",
+            "name": "Qwen3.5 4B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.5-27B-4bit",
+            "name": "Qwen3.5 27B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.5-35B-A3B-4bit",
+            "name": "Qwen3.5 35B MoE",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.6-27B-UD-MLX-4bit",
+            "name": "Qwen3.6 27B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.6-35B-A3B-4bit",
+            "name": "Qwen3.6 35B MoE",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "Qwen3.6-35B-A3B-DFlash",
+            "name": "Qwen3.6 35B MoE DFlash",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "gemma-4-e2b-it-4bit",
+            "name": "Gemma 4 2B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "gemma-4-26b-a4b-it-4bit",
+            "name": "Gemma 4 26B MoE",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          },
+          {
+            "id": "gemma-4-31b-it-UD-MLX-4bit",
+            "name": "Gemma 4 31B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 32768
+          }
+        ]
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.ai/v1",
+        "apiKey": "${MOONSHOT_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "moonshot-v1-8k",
+            "name": "Moonshot v1 8K",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 4096
+          },
+          {
+            "id": "moonshot-v1-32k",
+            "name": "Moonshot v1 32K",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 16384
+          },
+          {
+            "id": "moonshot-v1-128k",
+            "name": "Moonshot v1 128K",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 65536
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": "${OPENROUTER_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen/qwen3.6-plus",
+            "name": "qwen3.6-plus-preview-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "nvidia/nemotron-3-super-120b-a12b:free",
+            "name": "nemotron-3-super-120b-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "z-ai/glm-4.5-air:free",
+            "name": "glm-4.5-air-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "minimax/minimax-m2.5:free",
+            "name": "minimax-m2.5-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+            "name": "qwen3-next-80b-a3b-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "openai/gpt-oss-120b:free",
+            "name": "gpt-oss-120b-free",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "qwen-coding-plan": {
+        "baseUrl": "https://coding-intl.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-78652150f4804a138cff82d02e560dc2",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.6-plus",
+            "name": "Qwen 3.6 Plus (Coding Plan)",
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3.5-plus",
+            "name": "Qwen 3.5 Plus (Coding Plan)",
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "Qwen 3 Max (Coding Plan)",
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen 3 Coder Plus (Coding Plan)",
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5 (Coding Plan)",
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "qwen-coding-plan/qwen3.6-plus",
+        "fallbacks": [
+          "qwen-coding-plan/kimi-k2.5",
+          "bailian/qwen3.6-plus",
+          "openrouter/minimax/minimax-m2.5:free"
+        ]
+      },
+      "models": {
+        "qwen-coding-plan/qwen3.6-plus": {},
+        "qwen-coding-plan/qwen3.5-plus": {},
+        "qwen-coding-plan/qwen3-max-2026-01-23": {},
+        "qwen-coding-plan/qwen3-coder-plus": {},
+        "qwen-coding-plan/kimi-k2.5": {},
+        "bailian/glm-4.7": {},
+        "bailian/glm-5": {},
+        "bailian/kimi-k2.5": {},
+        "bailian/MiniMax-M2.5": {},
+        "bailian/qwen3-coder-next": {},
+        "bailian/qwen3-coder-plus": {},
+        "bailian/qwen3.5-plus": {},
+        "dynamic/Qwen3.6-35B-A3B-4bit": {
+          "alias": "Dynamic"
+        },
+        "moonshot/kimi-k2.5": {
+          "alias": "Kimi"
+        },
+        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
+          "alias": "Nemotron-120B-Free"
+        },
+        "openrouter/z-ai/glm-4.5-air:free": {
+          "alias": "GLM-4.5-Air-Free"
+        },
+        "openrouter/minimax/minimax-m2.5:free": {
+          "alias": "MiniMax-M2.5-Free"
+        },
+        "openrouter/qwen/qwen3-next-80b-a3b-instruct:free": {
+          "alias": "Qwen3-Next-80B-A3B-Free"
+        },
+        "openrouter/openai/gpt-oss-120b:free": {
+          "alias": "GPT-OSS-120B-Free"
+        },
+        "bailian/qwen3.6-plus": {},
+        "bailian/qwen3-max-2026-01-23": {}
+      },
+      "workspace": "~/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": true,
+        "sources": [
+          "memory",
+          "sessions"
+        ],
+        "extraPaths": [
+          ".agent/handoffs"
+        ],
+        "experimental": {
+          "sessionMemory": true
+        },
+        "provider": "openai",
+        "remote": {
+          "baseUrl": "https://dynamic-llm.tailbf222c.ts.net:8000/v1/",
+          "apiKey": "dynamic"
+        },
+        "model": "Qwen3-Embedding-4B-MLX-4bit",
+        "sync": {
+          "watch": false,
+          "sessions": {
+            "deltaBytes": 100000,
+            "deltaMessages": 50
+          }
+        },
+        "query": {
+          "hybrid": {
+            "enabled": true,
+            "vectorWeight": 0.7,
+            "textWeight": 0.3,
+            "candidateMultiplier": 4,
+            "mmr": {
+              "enabled": true,
+              "lambda": 0.7
+            },
+            "temporalDecay": {
+              "enabled": true,
+              "halfLifeDays": 30
+            }
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "maxEntries": 50000
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "timeoutSeconds": 300,
+        "maxActiveTranscriptBytes": "20mb",
+        "truncateAfterCompaction": true,
+        "notifyUser": true
+      },
+      "heartbeat": {
+        "every": "1h",
+        "activeHours": {
+          "start": "08:00",
+          "end": "22:00",
+          "timezone": "America/Chicago"
+        },
+        "model": "bailian/qwen3.6-plus",
+        "includeReasoning": false,
+        "target": "last",
+        "directPolicy": "allow",
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "ackMaxChars": 300,
+        "lightContext": true
+      },
+      "thinkingDefault": "high",
+      "timeoutSeconds": 600,
+      "skipBootstrap": true
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "planner",
+        "name": "planner",
+        "workspace": "/Users/jsirish/.openclaw/agents/planner/workspace",
+        "agentDir": "/Users/jsirish/.openclaw/agents/planner",
+        "tools": {
+          "exec": {
+            "ask": "off"
+          }
+        }
+      },
+      {
+        "id": "builder",
+        "name": "builder",
+        "workspace": "/Users/jsirish/.openclaw/agents/builder/workspace",
+        "agentDir": "/Users/jsirish/.openclaw/agents/builder",
+        "tools": {
+          "exec": {
+            "ask": "off"
+          }
+        }
+      },
+      {
+        "id": "reviewer",
+        "name": "reviewer",
+        "workspace": "/Users/jsirish/.openclaw/agents/reviewer/workspace",
+        "agentDir": "/Users/jsirish/.openclaw/agents/reviewer",
+        "tools": {
+          "exec": {
+            "ask": "off"
+          }
+        }
+      },
+      {
+        "id": "merger",
+        "name": "merger",
+        "workspace": "/Users/jsirish/.openclaw/agents/merger/workspace",
+        "agentDir": "/Users/jsirish/.openclaw/agents/merger",
+        "tools": {
+          "exec": {
+            "ask": "off"
+          }
+        }
+      },
+      {
+        "id": "watchdog",
+        "name": "watchdog",
+        "workspace": "~/.openclaw/agents/watchdog/workspace",
+        "agentDir": "~/.openclaw/agents/watchdog",
+        "tools": {
+          "exec": {
+            "ask": "off"
+          }
+        }
+      }
+    ]
+  },
+  "tools": {
+    "alsoAllow": [],
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "perplexity"
+      }
+    },
+    "exec": {
+      "ask": "off"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "groupPolicy": "allowlist",
+      "commands": {
+        "native": false
+      },
+      "streaming": {
+        "mode": "partial"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789",
+        "http://192.168.68.142:18789",
+        "vscode-webview://*",
+        "vscode-file://*",
+        "null",
+        "ws://localhost:18789",
+        "ws://127.0.0.1:18789"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "cbcd597c91b60139e14cfb1d67efca55ace461f45c1cc06a",
+      "rateLimit": {
+        "maxAttempts": 10,
+        "windowMs": 60000,
+        "lockoutMs": 300000
+      }
+    },
+    "remote": {
+      "token": "cbcd597c91b60139e14cfb1d67efca55ace461f45c1cc06a"
+    },
+    "nodes": {
+      "allowCommands": [
+        "system.run",
+        "system.which",
+        "system.notify",
+        "canvas.*"
+      ]
+    },
+    "port": 18789
+  },
+  "skills": {
+    "entries": {
+      "autopipe": {
+        "apiKey": "${GITHUB_TOKEN}"
+      },
+      "gog": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "agent_consultation": {
+        "enabled": false
+      },
+      "hubspot": {
+        "enabled": false
+      },
+      "teamwork": {
+        "enabled": false
+      },
+      "claude-code-router": {
+        "enabled": false
+      },
+      "cloudflare-saas": {
+        "enabled": false
+      },
+      "copaw-env-vars": {
+        "enabled": false
+      },
+      "copaw-management": {
+        "enabled": false
+      }
+    },
+    "load": {
+      "extraDirs": [
+        "~/.openclaw/workspace/skills/autopipe/skills"
+      ]
+    }
+  },
+  "session": {
+    "scope": "per-sender",
+    "resetTriggers": [
+      "/new",
+      "/reset"
+    ],
+    "reset": {
+      "mode": "daily",
+      "atHour": 4,
+      "idleMinutes": 10080
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.29",
+    "lastTouchedAt": "2026-05-01T23:43:09.717Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-16T04:23:21.890Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "plugins": {
+    "allow": [
+      "telegram",
+      "memory-core",
+      "memory-wiki",
+      "openrouter",
+      "moonshot",
+      "perplexity",
+      "a2a-gateway",
+      "active-memory"
+    ],
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "opik-openclaw": {
+        "enabled": false
+      },
+      "memory-core": {
+        "config": {}
+      },
+      "memory-wiki": {
+        "enabled": true,
+        "config": {
+          "vaultMode": "bridge",
+          "vault": {
+            "path": "/Users/jsirish/.openclaw/wiki",
+            "renderMode": "obsidian"
+          },
+          "bridge": {
+            "enabled": true,
+            "readMemoryArtifacts": true,
+            "indexDreamReports": true,
+            "indexDailyNotes": true,
+            "indexMemoryRoot": true,
+            "followMemoryEvents": true
+          },
+          "search": {
+            "backend": "shared",
+            "corpus": "all"
+          },
+          "render": {
+            "createDashboards": true,
+            "createBacklinks": true
+          }
+        }
+      },
+      "openrouter": {
+        "enabled": true
+      },
+      "moonshot": {
+        "enabled": true
+      },
+      "perplexity": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "${PERPLEXITY_API_KEY}"
+          }
+        }
+      },
+      "active-memory": {
+        "enabled": true,
+        "config": {
+          "agents": [
+            "main"
+          ],
+          "allowedChatTypes": [
+            "direct",
+            "group"
+          ],
+          "queryMode": "message",
+          "promptStyle": "balanced",
+          "timeoutMs": 25000,
+          "maxSummaryChars": 240,
+          "logging": false,
+          "persistTranscripts": false,
+          "model": "bailian/qwen3.5-plus"
+        }
+      },
+      "a2a-gateway": {
+        "enabled": true,
+        "config": {
+          "agentCard": {
+            "name": "Iris (jsirish)",
+            "description": "Jason Irish OpenClaw A2A Agent - Dynamic Agency",
+            "url": "http://jasons-m4-macbook-pro.tailbf222c.ts.net:18800/a2a/jsonrpc"
+          },
+          "server": {
+            "host": "0.0.0.0"
+          },
+          "security": {
+            "inboundAuth": "bearer",
+            "token": "a610afb42f9b2e9302341f110eb5fb5096d07a946a0706b4"
+          },
+          "routing": {
+            "defaultAgentId": "main"
+          },
+          "peers": [
+            {
+              "name": "dynamic-openclaw",
+              "agentCardUrl": "http://dynamic-openclaw.tailbf222c.ts.net:18800/.well-known/agent-card.json",
+              "auth": {
+                "type": "bearer",
+                "token": "edbff8990fd878ac02cf157f9100183bfc0db480faa28a51"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/Users/jsirish/.openclaw/exec-approvals.sock",
+    "token": "9pl5XsBgSVTO2SpRwrgJthXmIBLXVd5m"
+  },
+  "defaults": {
+    "security": "full",
+    "ask": "off"
+  },
+  "agents": {
+    "main": {
+      "allowlist": [
+        {
+          "id": "1A5EC81C-74FE-4638-8422-AE7B4A432043",
+          "pattern": "/opt/homebrew/bin/*",
+          "lastUsedAt": 1777680486234,
+          "lastUsedCommand": "node ~/.openclaw/workspace/skills/autopipe/skills/autopipe-health/run.js",
+          "lastResolvedPath": "/opt/homebrew/bin/node"
+        },
+        {
+          "id": "22C840BD-89E6-4A8B-BDC7-A435EF18D8DA",
+          "pattern": "/opt/homebrew/bin/*",
+          "lastUsedAt": 1777680486234,
+          "lastUsedCommand": "node ~/.openclaw/workspace/skills/autopipe/skills/autopipe-health/run.js",
+          "lastResolvedPath": "/opt/homebrew/bin/node"
+        },
+        {
+          "id": "F85F3C90-9D47-4555-A9AB-E70593FB5C14",
+          "lastResolvedPath": "/bin/launchctl",
+          "lastUsedAt": 1777679505092,
+          "lastUsedCommand": "launchctl list | grep -i autopipe",
+          "pattern": "/usr/bin/*"
+        },
+        {
+          "id": "E6428E48-39C4-4FF3-931B-2A639D32DC20",
+          "pattern": "/bin/*",
+          "lastUsedAt": 1777679505092,
+          "lastUsedCommand": "launchctl list | grep -i autopipe",
+          "lastResolvedPath": "/bin/launchctl"
+        }
+      ],
+      "autoAllowSkills": false
+    }
+  }
+}
